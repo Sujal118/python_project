@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Booking</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #9b5de5 0%, #f15bb5 100%);
+            background-attachment: fixed;
+            transition: background 0.5s ease;
+        }
+        body:hover {
+            background: linear-gradient(135deg, #f15bb5 0%, #9b5de5 100%);
+        }
+        .dashboard-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            width: 400px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dashboard-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        .dashboard-container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+            animation: fadeIn 2s;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+            outline: none;
+            border-color: #007bff;
+        }
+        .form-group input[type="datetime-local"] {
+            cursor: pointer;
+        }
+        .form-group .dropdown {
+            width: 100%;
+        }
+        .form-group select {
+            cursor: pointer;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            text-transform: uppercase;
+        }
+        .submit-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>New Booking</h1>
+        <div class="form-group">
+            <label for="date">📅 Select Date:</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="time">⏰ Select Time:</label>
+            <div class="dropdown">
+                <label for="hours">Hours</label>
+                <select id="hours" name="hours">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                
+                <label for="minutes">Minutes</label>
+                <select id="minutes" name="minutes">
+                    <option value="00">00</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    <option value="51">51</option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                    <option value="60">60</option>
+                </select>
+                
+                <label for="ampm">AM/PM</label>
+                <select id="ampm" name="ampm">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="duration">⏳ Duration of Parking:</label>
+            <div class="dropdown">
+                <select id="hours-duration" name="hours-duration">
+                    <option value="0">0 Hours</option>
+                    <option value="1">1 Hour</option>
+                    <option value="2">2 Hours</option>
+                    <option value="3">3 Hours</option>
+                    <option value="4">4 Hours</option>
+                    <option value="5">5 Hours</option>
+                    <option value="6">6 Hours</option>
+                    <option value="7">7 Hours</option>
+                    <option value="8">8 Hours</option>
+                    <option value="9">9 Hours</option>
+                    <option value="10">10 Hours</option>
+                </select>
+                <select id="minutes-duration" name="minutes-duration">
+                    <option value="0">0 Minutes</option>
+                    <option value="15">15 Minutes</option>
+                    <option value="30">30 Minutes</option>
+                    <option value="45">45 Minutes</option>
+                </select>
+            </div>
+        </div>
+        <button class="submit-btn">Search Available Slots</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #9b5de5 0%, #f15bb5 100%);
+            background-attachment: fixed;
+            transition: background 0.5s ease;
+        }
+        body:hover {
+            background: linear-gradient(135deg, #f15bb5 0%, #9b5de5 100%);
+        }
+        .dashboard-container {
+            background: #fff;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0);
+            width: 400px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dashboard-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+        .dashboard-container h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            color: #333;
+            animation: fadeIn 2s;
+            font-weight: 600;
+        }
+        .form-group {
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 0px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10.8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            transition: box-shadow 0.3s, border-color 0.3s;
+        }
+        .form-group input:focus {
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+            outline: none;
+            border-color: #007bff;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 18px;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+            text-transform: uppercase;
+        }
+        .submit-btn:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+        .form-group input::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>New Registration</h1>
+        <div class="form-group">
+            <label for="first-name">📝 First Name:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name">
+        </div>
+        <div class="form-group">
+            <label for="last-name">📝 Last Name:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name">
+        </div>
+        <div class="form-group">
+            <label for="user-id">🆔 User ID:</label>
+            <input type="text" id="user-id" name="user-id" placeholder="Enter your user ID">
+        </div>
+        <div class="form-group">
+            <label for="mobile-number">📱 Mobile Number:</label>
+            <input type="tel" id="mobile-number" name="mobile-number" placeholder="Enter your mobile number">
+        </div>
+        <div class="form-group">
+            <label for="vehicle-number">🚗 Vehicle Number:</label>
+            <input type="text" id="vehicle-number" name="vehicle-number" placeholder="Enter your vehicle number">
+        </div>
+        <div class="form-group">
+            <label for="password">🔒 Create Password:</label>
+            <input type="password" id="password" name="password" placeholder="Create a password">
+        </div>
+        <button class="submit-btn">Register</button>
+    </div>
+</body>
+</html>
